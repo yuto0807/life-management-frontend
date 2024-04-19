@@ -9,6 +9,10 @@ jobs:
     name: CI
     runs-on: ubuntu-latest
     steps:
+      - name: Use NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
       - name: Install packages
         run: npm ci
       - name: tsc

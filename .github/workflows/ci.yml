@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branch:
+      - main
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install packages
+        run: npm ci
+      - name: tsc
+        run: npm run tsc:check
+      - name: Prettier
+        run: npm run format:check
+      - name: ESLint
+        run: npm run lint:check

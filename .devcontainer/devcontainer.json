@@ -1,0 +1,9 @@
+{
+  "name": "",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/usr/src/app",
+  "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/usr/src/app",
+  "postCreateCommand": "apt update && apt install -y git"
+}

@@ -5,5 +5,11 @@
   },
   "workspaceFolder": "/usr/src/app",
   "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/usr/src/app",
-  "postCreateCommand": "apt update && apt install -y git"
+  "postCreateCommand": "apt update && apt install -y git",
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "streetsidesoftware.code-spell-checker"],
+      "settings": {"editor.tabSize": 2, "editor.formatOnSave": true, "editor.defaultFormatter": "esbenp.prettier-vscode"}
+    }
+  }
 }
